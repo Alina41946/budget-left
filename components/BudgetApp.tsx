@@ -44,6 +44,13 @@ export default function BudgetApp() {
 
   const key = monthKey();
 
+  // PWA Service Worker
+  useEffect(() => {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/budget-left/sw.js');
+    }
+  }, []);
+
   useEffect(() => {
     try {
       const raw = localStorage.getItem(STORAGE_KEY);
