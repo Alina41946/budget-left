@@ -9,8 +9,19 @@ export const metadata: Metadata = {
   manifest: '/budget-left/manifest.webmanifest',
 
   icons: {
-    icon: '/budget-left/icon.svg',
-    apple: '/budget-left/icon.svg',
+    icon: [
+      {
+        url: '/budget-left/icon-192.png',
+        sizes: '192x192',
+        type: 'image/png',
+      },
+      {
+        url: '/budget-left/icon-512.png',
+        sizes: '512x512',
+        type: 'image/png',
+      },
+    ],
+    apple: '/budget-left/icon-192.png',
   },
 
   appleWebApp: {
