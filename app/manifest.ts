@@ -1,7 +1,23 @@
-import type { MetadataRoute } from 'next';
+import type {MetadataRoute} from 'next';
+
+export const dynamic = 'force-static';
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: '還可以花多少', short_name: '預算', description: '簡單查看這個月還可以花多少錢。', start_url: '/', display: 'standalone', background_color: '#f6f3ee', theme_color: '#f6f3ee', lang: 'zh-Hant', icons: [{ src: '/icon.svg', sizes: 'any', type: 'image/svg+xml' }]
+    name: '可用預算',
+    short_name: '可用預算',
+    description: '簡單查看當月還有多少預算可以使用。',
+    start_url: '/budget-left/',
+    display: 'standalone',
+    background_color: '#f6f3ee',
+    theme_color: '#f6f3ee',
+    lang: 'zh-Hant-TW',
+    icons: [
+      {
+        src: '/budget-left/icon.svg',
+        sizes: 'any',
+        type: 'image/svg+xml',
+      },
+    ],
   };
 }
