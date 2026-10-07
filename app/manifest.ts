@@ -4,6 +4,8 @@ export const dynamic = 'force-static';
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
+    id: '/budget-left/',
+
     name: '還可以花多少',
     short_name: '還可以花多少',
     description: '簡單查看當月還有多少預算可以使用。',
